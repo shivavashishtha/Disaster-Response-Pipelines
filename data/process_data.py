@@ -32,7 +32,15 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
-    # drop duplicates
+    """Returns DataFrame after droping duplicates
+
+    Parameters:
+    DataFrame: The one which contains duplicates
+
+    Returns:
+    DataFrame: After droping the duplicates
+
+     """
     df = df.drop_duplicates()
     return df
     

@@ -18,6 +18,15 @@ from sklearn.multioutput import MultiOutputClassifier
 import pickle
 
 def load_data(database_filepath):
+    """Returns Series after extracting from Dataframe
+
+    Parameters:
+    Str: Database filepath
+
+    Returns:
+    Series after extracting from Dataframe
+
+   """
     engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql_table('DisasterResponse', engine)
     X = df.message
